@@ -7,13 +7,11 @@ Siddartha Tondapu
 December 06, 2017
 
 ### Domain Background
-_(approx. 1-2 paragraphs)_
 
 Automobile accidents are involuntary and are often expected. Nearly 1.3 million people in the world and 37,000 people in the United States alone lose their life in these tragic accidents. While these are major accidents, there are many minor accidents and fender benders that cause devastating psychological damages. During these times, the victim wants to focus more time on his family, friends, and loved ones than to deal with insurance claims. Unfortunately, I was involved in a small fender bender recently, and I felt the whole process of claiming for insurance to be long and tedious. With so many accidents happening every day, I realized there can be better ways to make the whole process quick and seamless.
 
 
 ### Problem Statement
-_(approx. 1 paragraph)_
 
 Allstate, an insurance company, saw this as a bottleneck and decided to automate the whole process by predicting the cost and severity of the claim. Our goal in this project is to use machine learning algorithms to model the cost and severity of a claim. We have been given some input variables (both continuous and discrete/categorical). Using these input variables, we will be predicting the output cost of the claim by using a regression model. Since cost is a continuous value, we will use a piecewise function to define the severity. For example:
 - cost of claim is < 1000 =  minor severity
@@ -21,7 +19,6 @@ Allstate, an insurance company, saw this as a bottleneck and decided to automate
 - cost of claim > 5000 = major severity
 
 ### Datasets and Inputs
-_(approx. 2-3 paragraphs)_
 
 Allstate has provided us with some test and training data. It can be found here: https://www.kaggle.com/c/allstate-claims-severity/data
 
@@ -32,20 +29,17 @@ Finally, there are 188318 claims in training data and 125546 claims in testing d
 
 
 ### Solution Statement
-_(approx. 1 paragraph)_
 
 Since we are using 116 categorical and 14 continuous data points to predict a target value: loss (continuous), this is a prime candidate for supervised regression model. We need to reduce the number of input variables, convert categorical to discrete numbers, and finally use one of a well known regression model such as SVM, LinearRegression, Decision Trees, etc to predict the target variable. I will use GridSearch to fine tune the params for the model in sklearn.
 
 
 ### Benchmark Model
-_(approximately 1-2 paragraphs)_
 
 Kaggle provides average scores of previous submissions here: https://www.kaggle.com/c/allstate-claims-severity/leaderboard
 I will download the data as a CSV, remove any scores thats greater than 5000, and find the mean/average scores. Upon doing this calculation, the mean score was 1222.24. This score is the mean absolute error and the goal is to reduce this number. The average score can be used as a benchmark model for our linear regression model.
 
 
 ### Evaluation Metrics
-_(approx. 1-2 paragraphs)_
 
 Our model will be evaluated on the mean absolute error (MAE) between the predicted loss and actual loss. This evaluation metric is provided to us by Kaggle. In general, our objective is to minimize the MAE.
 
@@ -53,7 +47,6 @@ We will use the claims or input variables from test.csv. Using our regression mo
 
 
 ### Project Design
-_(approx. 1 page)_
 
 We will be using three steps:
 - Data Exploration
